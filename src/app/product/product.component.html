@@ -1,0 +1,13 @@
+<div class="product" *ngFor="let i of getData() | search: textSearch">
+  <div class="picture">
+    <img src={{i.picture}} class="image" alt="">
+  </div>
+  <div class="info">
+    <p class="price"> {{i.price}} </p>
+    <p class="info">{{i.name  }}</p>
+
+    <p class="year">Year: {{i.year}}</p>
+  </div>
+  <div class="buy">  <button type="button" (click)="incBottel(i)">buy</button>
+  </div>
+</div>

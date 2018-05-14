@@ -1,0 +1,10 @@
+<div class="search"><input type="text" [(ngModel)]="textSearch" ></div>
+<div class="catalog">
+    <!--<app-product (bottle)="sendData($event)" ></app-product>-->
+    <app-product [textSearch]="textSearch"></app-product>
+
+</div>
+    <div class="footer">
+        <app-shoping-cart></app-shoping-cart>
+    </div>
+

@@ -1,0 +1,20 @@
+
+
+<div class="footer">
+  <span class="show-cart" (click)="showCart()" *ngIf="!showCartViget"><i class="fa fa-angle-double-up" aria-hidden="true"></i></span>
+  <span class="show-cart" (click)="showCart()"*ngIf="showCartViget"><i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
+  <div class="shopng-cart" *ngIf="showCartViget">
+    <div class="my-Byu" *ngFor="let i of universalArr">
+      <p class="my-prod">{{i.name}}   {{i.price}}* ({{i.count}})    <span class="delete" (click)="remove(i)"><i class="fa fa-trash-o" aria-hidden="true"></i></span></p>
+
+    </div>
+    <hr>
+  </div>
+
+  <div class="shoping-cart">
+    <h2 class="bottles" >bottles: {{bottleCount}}   </h2>
+    <h2 class="total">total: {{total | currency:false:'1.1-1'}}</h2>
+    <button type="button" class="pay">pay</button>
+  </div>
+</div>
+
